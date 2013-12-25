@@ -1,0 +1,13 @@
+.borded {
+    border-top: 1px gray dashed;
+    margin-top: 3px;
+    padding-top: 3px;
+}
+
+a {
+	color: #0000FF;
+}
+
+a:visited {
+	color: #800080;
+}

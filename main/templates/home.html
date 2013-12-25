@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title_block %} Strona główna
+{% endblock %}
+
+{% block latest_posts %}
+        {% for entry in entries %}
+            <div class="borded">
+                <a href="{{ entry.address }}">
+                    {{ entry.title }}
+                </a>
+                <br>
+                z
+                <a href="{{ entry.blog.address}}">
+                    {{ entry.blog.name }}
+                </a>
+                <br>
+                <font size='1'>
+                    {{ entry.date }}
+                </font><br>
+            </div>
+        {% endfor %}
+{% endblock %}
+
+{% block blogs_list %}
+    {% for blog in blogs %}
+        <div class="blog_list_item borded">
+            <a href="{{ blog.address }}">
+                {{ blog.name }}
+            </a><br>
+        </div>
+    {% endfor %}
+{% endblock %}
